@@ -11,8 +11,7 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update
 RUN apt-get -y upgrade
 # install 32 bit libraries required for gnuarm tools from
-# https://launchpad.net/gcc-arm-embedded & a few minimalistic tools with ssh
-server
+# https://launchpad.net/gcc-arm-embedded & a few minimalistic tools with sshserver
 RUN dpkg --add-architecture i386 && \
 apt-get update && \
 apt-get -y install \
