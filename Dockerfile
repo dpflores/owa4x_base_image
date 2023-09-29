@@ -5,6 +5,7 @@ COPY settings.js /data/settings.js
 
 
 ## For run owasys programs
+RUN apt-get install dpkg
 RUN dpkg-divert --local --rename --add /sbin/initctl
 RUN ln -sf /bin/true /sbin/initctl
 ENV DEBIAN_FRONTEND noninteractive
